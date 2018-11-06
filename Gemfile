@@ -50,20 +50,6 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-
-  #rspecからpry-coollineまでは「Ruby on Rails 5の上手な使い方」を参考に記載した
-  gem 'rspec-rails'
-  gem 'factory_bot_rails'
-  gem 'database_cleaner'
-  gem 'faker'
-  gem 'pry-rails'
-  gem 'pry-coolline'
-  gem 'guard-rspec', require: false
-
-  gem "better_errors"
-  gem "binding_of_caller"
-
-  gem 'bullet'
 end
 
 group :test do
