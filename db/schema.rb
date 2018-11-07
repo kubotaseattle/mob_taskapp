@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_07_034026) do
+ActiveRecord::Schema.define(version: 2018_11_07_035524) do
 
   create_table "articles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "title"
@@ -19,6 +19,14 @@ ActiveRecord::Schema.define(version: 2018_11_07_034026) do
     t.datetime "published_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "cards", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.bigint "Status_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["Status_id"], name: "index_cards_on_Status_id"
   end
 
   create_table "lanes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -41,5 +49,6 @@ ActiveRecord::Schema.define(version: 2018_11_07_034026) do
     t.index ["lane_id"], name: "index_tasks_on_lane_id"
   end
 
+  add_foreign_key "cards", "Statuses"
   add_foreign_key "tasks", "lanes"
 end
