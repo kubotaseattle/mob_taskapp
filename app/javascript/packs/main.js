@@ -1,9 +1,9 @@
 import Vue from 'vue/dist/vue.esm.js'
 import App from '../app.vue'
 
-new Vue ({
+const app = new Vue ({
   el: '#app',
-  componets: {
+  components: {
     App
   },
   template: '<App/>'
