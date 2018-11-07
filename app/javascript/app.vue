@@ -1,23 +1,22 @@
 <template>
   <div id="app">
-    <p>{{ message }}</p>
+    <status/>
   </div>
 </template>
 
 <script>
-import 
-export default {
-  data: function () {
-    return {
-      message: "Hello Vue!"
+  import status from './components/status';
+
+  export default {
+    components: {
+      status
     }
   }
-}
 </script>
 
 <style scoped>
-p {
-  font-size: 2em;
-  text-align: center;
-}
+  p {
+    font-size: 2em;
+    text-align: center;
+  }
 </style>

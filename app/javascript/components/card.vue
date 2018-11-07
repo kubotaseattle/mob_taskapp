@@ -1,16 +1,15 @@
 <template>
   <div>
-    親だよ
-    <card/>
+    <p v-for="card in cards">
+      {{ card }}
+    </p>
   </div>
 </template>
 
 <script>
-  import card from './card'
-
   export default{
-    components: {
-      card
+    data: {
+      cards: [1,2,3]
     }
   }
 </script>
